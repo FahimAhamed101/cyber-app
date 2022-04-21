@@ -149,7 +149,7 @@ const CyberApeSearch: NextPage<CyberApeSearchProps> = ({ identifier = null }) =>
           <main>
             <CyberApeSearchWalletApeButtonSkeleton />
             {new Array(5).fill(0).map((_, index) => (
-              <CyberApeSearchWalletApeButtonSkeleton />
+              <CyberApeSearchWalletApeButtonSkeleton key={index} />
             ))}
           </main>
         </CyberApeSearchWalletApesContainer>
@@ -189,7 +189,7 @@ const CyberApeSearch: NextPage<CyberApeSearchProps> = ({ identifier = null }) =>
       {apeData !== undefined && apeData !== null && inputIdentifier && (
         <CyberApeSearchResultContainer>
           <CyberApeSearchResultRenderer>
-            <CyberApeRenderer size="350px" traits={apeData.traits} />
+            <CyberApeRenderer size="350px" traits={apeData.traits}  />
           </CyberApeSearchResultRenderer>
 
           <CyberApeSearchResultContent>
