@@ -61,6 +61,7 @@ export const LandingHeroButtonsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  
 `;
 
 export const LandingHeroSection = styled.section`
@@ -81,6 +82,7 @@ export const LandingHeroUpperContent = styled.div`
   gap: 3rem;
 
   margin: 10rem 0;
+  padding-bottom:10rem;
 `;
 
 export const RoadmapSection = styled.section`

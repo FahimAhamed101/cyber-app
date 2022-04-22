@@ -63,7 +63,7 @@ const HorizontalSlider: NextPage<HorizontalSliderProps> = ({ hasControls, childr
         drag="x"
         style={{ x: MOTION_VALUE }}
         dragElastic={0.2}
-        dragConstraints={{ right: 0, left: -leftConstraint }}
+        dragConstraints={{ right: 0, left: leftConstraint }}
         whileTap={{ scale: 0.985, cursor: "grabbing" }}
       >
         {children}

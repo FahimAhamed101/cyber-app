@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import Router , {useRouter}  from 'next/router';
 import type { GetServerSidePropsContext, NextPage } from "next";
 import Head from "next/head";
 import GlobalHeader from "../components/GlobalHeader";
@@ -27,7 +28,6 @@ import SignatureButton from "../components/SignatureButton";
 import CyberApeRenderer from "../components/CyberApeRenderer";
 import useSWR from "swr";
 import { fetcher } from "../utils";
-import { useRouter } from "next/router";
 import CyberApeSearch from "../components/CyberApeSearch";
 import SuperModalContext from "../contexts/SuperModal";
 import DerivativeSection from "../components/DerivativeSection";
@@ -67,7 +67,7 @@ const Home: NextPage<HomeProps> = ({ twitterData }) => {
       return;
     }
   }
-
+  const router = useRouter()
   useEffect(checkForApeData, []);
 
   return (
@@ -157,7 +157,8 @@ const Home: NextPage<HomeProps> = ({ twitterData }) => {
               <SignatureButton onClick={() => {}} isContrast accent="#5865F2">
                 troop&apos;s hub
               </SignatureButton>
-              <SignatureButton onClick={() => {}} accent="#5865F2">
+              <SignatureButton onClick={() => {window.location.href = "https://google.com/about";}} accent="#5865F2">
+             
                 <DiscordIcon fill="rgba(255, 255, 255, 0.35)" />
                 discord server
               </SignatureButton>

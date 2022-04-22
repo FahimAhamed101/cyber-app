@@ -5,7 +5,9 @@ export const GlobalFAQContainer = styled.section`
  width:100%;
 
   background: #151a42;
-
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   @media screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@ export const GlobalFAQContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
- 
+ margin:50px;
   }
 
 
