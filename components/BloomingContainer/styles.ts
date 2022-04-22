@@ -11,7 +11,7 @@ export const BloomingContainerDiv = styled.div.attrs<BloomingContainerDivProps>(
 
   display: flex;
   flex-direction: column;
-  align-items: "center";
+  align-items: "flex-start";
   gap: 0.75rem;
 
   height: 100%;

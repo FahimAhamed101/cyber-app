@@ -4,17 +4,22 @@ import { PAGE_MAX_WIDTH } from "../constants";
 
 export const HomeContainer = styled.div`
   width: 100%;
-  @media screen and (max-width: 600px) {
-    width: 200%;
-  
-  
-  }
+
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
 
   overflow-x: hidden;
+  @media screen and (max-width: 600px) {
+    width: 200%;
+
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
 `;
 
 export const NotFoundContainer = styled.section`
@@ -61,7 +66,7 @@ export const LandingHeroButtonsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  
+ 
 `;
 
 export const LandingHeroSection = styled.section`
@@ -82,7 +87,6 @@ export const LandingHeroUpperContent = styled.div`
   gap: 3rem;
 
   margin: 10rem 0;
-  padding-bottom:10rem;
 `;
 
 export const RoadmapSection = styled.section`
@@ -94,14 +98,6 @@ export const RoadmapSection = styled.section`
   margin: 0 auto 15rem auto;
 
   gap: 12.5rem;
-  @media screen and (max-width: 600px) {
-   
- 
-  width: 100%;
-  max-width: ${PAGE_MAX_WIDTH};
-  }
-
-
 `;
 
 export const PlayToEarchCTA = styled.section`
@@ -123,7 +119,6 @@ export const PlayToEarchCTA = styled.section`
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
   }
- 
 
   main {
     display: flex;

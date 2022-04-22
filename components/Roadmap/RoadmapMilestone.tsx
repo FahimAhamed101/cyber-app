@@ -43,7 +43,7 @@ const RoadmapMilestone: NextPage<RoadmapMilestoneProps> = ({ title, description,
       <BloomingContainer
         accent="#444"
         customStyles={{
-          width: "100%",
+          width: "40%",
           padding: "2rem 2rem 0 2rem",
           border: "none",
         }}

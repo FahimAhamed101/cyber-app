@@ -77,7 +77,7 @@ const GlobalFAQ: NextPage = () => {
             <p>check out our discord server and let us know whats boggling your mind</p>
           </main>
           <main>
-            <SignatureButton isContrast onClick={() => {}} accent="#5865F2">
+            <SignatureButton isContrast onClick={() => {window.location.href = "https://discord.gg/cyberapeage";}} accent="#5865F2">
               <DiscordIcon />
               JOIN DISCORD
             </SignatureButton>

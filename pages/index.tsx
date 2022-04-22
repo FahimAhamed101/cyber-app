@@ -45,7 +45,9 @@ import TeamCard from "../components/TeamCard";
 import HeadMetadata from "../components/HeadMetadata";
 import { DerivativeSectionContextProvider } from "../contexts/DerivativeSection";
 import PageTopSpacer from "../components/PageTopSpacer";
+import MobileMenuContext from "../contexts/MobileMenu";
 
+import HubComingSoon from "../components/GlobalHeader/HubComingSoon"
 interface HomeProps {
   twitterData: any;
 }
@@ -56,7 +58,9 @@ const Home: NextPage<HomeProps> = ({ twitterData }) => {
   function travelToMarketplace() {
     window.open("https://magiceden.io/marketplace/cyber_ape_age", "_blank");
   }
-
+ function openHub(): void {
+    open("troop's hub", <HubComingSoon />);
+  }
   function checkForApeData() {
     const COOKIE_SEARCH_KEY = "CYBERAPE_SEARCH_IDENTIFIER";
     const CYBERAPE_IDENTIFIER = cookieCutter.get(COOKIE_SEARCH_KEY);
@@ -69,7 +73,7 @@ const Home: NextPage<HomeProps> = ({ twitterData }) => {
   }
   const router = useRouter()
   useEffect(checkForApeData, []);
-
+ 
   return (
     <>
       <HeadMetadata />
@@ -84,7 +88,7 @@ const Home: NextPage<HomeProps> = ({ twitterData }) => {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel lorem est ullamcorper eget twitter facilisi etiam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis."
             />
             <LandingHeroButtonsWrapper>
-              <SignatureButton onClick={() => {}} isContrast accent="#5865F2">
+              <SignatureButton onClick= {openHub} isContrast accent="#5865F2">
                 troop&apos;s hub
               </SignatureButton>
               <SignatureButton onClick={travelToMarketplace} accent="#E42575">
@@ -157,7 +161,7 @@ const Home: NextPage<HomeProps> = ({ twitterData }) => {
               <SignatureButton onClick={() => {}} isContrast accent="#5865F2">
                 troop&apos;s hub
               </SignatureButton>
-              <SignatureButton onClick={() => {window.location.href = "https://google.com/about";}} accent="#5865F2">
+              <SignatureButton onClick={() => {window.location.href = "https://discord.gg/cyberapeage";}} accent="#5865F2">
              
                 <DiscordIcon fill="rgba(255, 255, 255, 0.35)" />
                 discord server

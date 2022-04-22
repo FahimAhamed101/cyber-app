@@ -54,7 +54,7 @@ const MobileMenu: NextPage = () => {
             CYBERAPEAGE
           </Twitter>
 
-          <Discord href="https://discord.com/invite/cyberapeage" target="_blank" rel="noreferrer">
+          <Discord href="https://discord.gg/XSKH5Wcs" target="_blank" rel="noreferrer">
             <DiscordIcon />
             discord
           </Discord>

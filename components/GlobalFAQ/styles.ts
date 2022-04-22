@@ -2,33 +2,34 @@ import styled from "styled-components";
 import { PAGE_MAX_WIDTH } from "../../constants";
 
 export const GlobalFAQContainer = styled.section`
- width:100%;
+  width: 100%;
 
   background: #151a42;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+
+  padding: 5rem 0 0 0;
+
+  position: relative;
   @media screen and (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    width:200%;
-    gap: 1rem;}
+    
+    width: 200%;
+    background: #151a42;
+    padding: 5rem 5rem 5rem 5rem;
+  
+    position: relative;
+  }
 
 `;
 
 export const GlobalFAQContentWrapper = styled.div`
+  max-width: ${PAGE_MAX_WIDTH};
 
-
-
+  margin: 7.5rem auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
 
- margin:50px;
-  }
-
-
   gap: 4rem;
+
 `;
 
 export const FaqItem = styled.div`

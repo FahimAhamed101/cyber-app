@@ -64,7 +64,6 @@ export const RoadmapMilestoneContainer = styled.div`
 export const RoadmapMilestoneTitle = styled.h2`
   text-transform: uppercase;
   font-size: 2.25rem;
-  
 `;
 
 export const RoadmapMilestoneCenterSquare = styled.div<RoadmapMilestoneCenterSquareProps>`
@@ -119,13 +118,11 @@ export const RoadmapMilestoneDesc = styled.p`
 `;
 
 export const RoadmapMilestoneDateWrapper = styled.div`
-  width: 100%;
+  width: 40%;
 `;
 
 export const RoadmapMilestoneDate = styled.h3`
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: normal;
-  padding-right:5rem;
-  padding-left:5rem;
 `;

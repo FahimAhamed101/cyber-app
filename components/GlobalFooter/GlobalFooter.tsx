@@ -4,7 +4,13 @@ import BloomingContainer from "../BloomingContainer";
 import CyberApeRenderer from "../CyberApeRenderer";
 import DiscordIcon from "../DiscordIcon";
 import TwitterIcon from "../TwitterIcon";
-import {
+import HubComingSoon from "../GlobalHeader/HubComingSoon";
+import GlobalFAQ from "../GlobalFAQ/GlobalFAQ";
+import { useContext } from "react";
+import MobileMenuContext from "../../contexts/MobileMenu";
+import SuperModalContext from "../../contexts/SuperModal";
+import CyberApeSearch from "../CyberApeSearch";
+import {ComingSoonTitle,
   CyberApeRendererWrapper,
   Discord,
   GlobalFooterContainer,
@@ -15,6 +21,22 @@ import {
 } from "./styles";
 
 const GlobalFooter: NextPage = () => {
+  const { closeMobileMenu } = useContext(MobileMenuContext);
+
+  const { open } = useContext(SuperModalContext);
+  const { openMobileMenu } = useContext(MobileMenuContext);
+  function openHub(): void {
+    open("troop's hub", <HubComingSoon />);
+  }
+  function openShop(): void {
+    open("troop's shop", <ComingSoonTitle>Coming Soon</ComingSoonTitle>);
+  }
+  function globalfaq(): void {
+    open("troop's explorer", <GlobalFAQ />);
+  }
+  function openExplorer(): void {
+    open("troop's explorer", <CyberApeSearch />);
+  }
   return (
     <GlobalFooterContainer>
       <BloomingContainer
@@ -32,9 +54,9 @@ const GlobalFooter: NextPage = () => {
         <LinksRowContainer>
           <LinksColumn>
             <h1>TRAVEL AROUND</h1>
-            <a href="#">TROOP&apos;S HUB</a>
-            <a href="#">SHOP</a>
-            <a href="#">FAQ</a>
+            <a onClick={openHub}>TROOP&apos;S HUB</a>
+            <a onClick={openShop}>SHOP</a>
+            <a onClick={globalfaq}>FAQ</a>
             <a href="#">EXPLORER</a>
           </LinksColumn>
           <LinksColumn>
@@ -50,7 +72,7 @@ const GlobalFooter: NextPage = () => {
                 CYBERAPEAGE
               </Twitter>
 
-              <Discord href="https://discord.gg/XSKH5Wcs" target="_blank" rel="noreferrer">
+              <Discord href="https://discord.gg/cyberapeage" target="_blank" rel="noreferrer">
                 <DiscordIcon />
                 discord
               </Discord>

@@ -8,8 +8,12 @@ body {
 
   background: #000;
 
-  
+  display: flex;
+  justify-content: center;
+width: 100vw;
+  scroll-behavior: smooth;
 }
+
 
 
 a {

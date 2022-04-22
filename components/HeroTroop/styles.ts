@@ -6,6 +6,12 @@ export const HeroTroopContainer = styled.section`
 
   display: flex;
   position: relative;
+  @media screen and (max-width: 600px) {
+   
+    position: relative;
+
+    padding-top:200px;
+  }
 `;
 
 export const HeroTroopRendererWrapper = styled.div<HeroTroopRendererWrapperProps>`
@@ -15,4 +21,6 @@ export const HeroTroopRendererWrapper = styled.div<HeroTroopRendererWrapperProps
     `calc(50% - ${centerTranslation ? centerTranslation : "0px"})`};
   transform: translateX(-50%);
   z-index: ${({ zIndex }) => zIndex};
+
+
 `;

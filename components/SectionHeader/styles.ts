@@ -2,14 +2,10 @@ import styled from "styled-components";
 import { TitleProps } from "./types";
 
 export const SectionHeaderContainer = styled.header`
-  
-
-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-
-
 `;
 
 export const Title = styled.h1<TitleProps>`

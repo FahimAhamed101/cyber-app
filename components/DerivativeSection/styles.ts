@@ -14,7 +14,7 @@ export const DerivativeSectionContainer = styled.section`
   display: flex;
   flex-direction: column-reverse;
   gap: 2rem;
-  
+
   align-items: center;
   justify-content: center;
 `;
@@ -39,7 +39,6 @@ export const DerivativeSectionTextColumn = styled.div<DerivativeSectionTextColum
   gap: 3rem;
   align-items: flex-start;
   justify-content: center;
- 
 
   ${(props) =>
     props.currentBackground &&

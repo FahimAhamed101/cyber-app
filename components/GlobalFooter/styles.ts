@@ -4,6 +4,15 @@ import { PAGE_MAX_WIDTH } from "../../constants";
 export const GlobalFooterContainer = styled.section`
   width: 100%;
 `;
+export const ComingSoonTitle = styled.h1`
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  margin: 15rem 0;
+`;
 
 export const CyberApeRendererWrapper = styled.div`
   position: absolute;
