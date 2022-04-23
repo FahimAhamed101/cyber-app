@@ -149,7 +149,7 @@ const CyberApeSearch: NextPage<CyberApeSearchProps> = ({ identifier = null }) =>
           <main>
             <CyberApeSearchWalletApeButtonSkeleton />
             {new Array(5).fill(0).map((_, index) => (
-              <CyberApeSearchWalletApeButtonSkeleton />
+              <CyberApeSearchWalletApeButtonSkeleton key={index} />
             ))}
           </main>
         </CyberApeSearchWalletApesContainer>
