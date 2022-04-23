@@ -16,7 +16,7 @@ export const HeroTroopContainer = styled.section`
 
 export const HeroTroopRendererWrapper = styled.div<HeroTroopRendererWrapperProps>`
   position: absolute;
-  bottom: 0;
+  bottom: 1;
   left: ${({ centerTranslation }) =>
     `calc(50% - ${centerTranslation ? centerTranslation : "0px"})`};
   transform: translateX(-50%);
